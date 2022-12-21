@@ -8,7 +8,7 @@
 		<version>3.0.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.curso.springboot.backend.apirest</groupId>
+	<groupId>com.bolsadeideas.springboot.backend.apirest</groupId>
 	<artifactId>spring-boot-backend-apirest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-backend-apirest</name>
