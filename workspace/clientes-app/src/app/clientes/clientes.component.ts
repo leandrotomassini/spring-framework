@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import swal from 'sweetalert2';
 
 import { Cliente } from './cliente';
 import { ClienteService } from './cliente.service';
@@ -19,6 +20,13 @@ export class ClientesComponent implements OnInit {
   }
 
 
-
+  delete(cliente: Cliente): void {
+    this.clienteService.delete(cliente.id)
+      .subscribe(
+        response => {
+          this.clientes = this.clientes.filter(cli => cli !== cliente);
+        }
+      )
+  }
 
 }

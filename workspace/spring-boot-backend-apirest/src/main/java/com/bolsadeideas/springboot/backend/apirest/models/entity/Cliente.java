@@ -8,6 +8,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
@@ -19,15 +20,19 @@ public class Cliente implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
-    
+
     private String nombre;
     private String apellido;
     private String email;
-    
-    @Column(name="create_at")
+
+    @Column(name = "create_at")
     @Temporal(TemporalType.DATE)
     private Date createAt;
+
+    @PrePersist
+    public void prePersist() {
+        createAt = new Date();
+    }
 
     public void setId(Long id) {
         this.id = id;
@@ -54,15 +59,15 @@ public class Cliente implements Serializable {
     }
 
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
 
     public String getApellido() {
-        return apellido;
+        return this.apellido;
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public Date getCreateAt() {
