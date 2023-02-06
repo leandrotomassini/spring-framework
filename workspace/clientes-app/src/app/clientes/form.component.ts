@@ -14,6 +14,8 @@ export class FormComponent implements OnInit {
   cliente: Cliente = new Cliente();
   titulo: string = 'Crear cliente';
 
+  private errores: string[] = [];
+
   constructor(
     private clienteService: ClienteService,
     private router: Router,
@@ -38,29 +40,39 @@ export class FormComponent implements OnInit {
     });
   }
 
-  public create(): void {
+  create(): void {
     this.clienteService.create(this.cliente)
-      .subscribe((cliente) => {
-        swal.fire(
-          'Nuevo cliente',
-          `Cliente ${cliente.nombre}, ${cliente.apellido} creado correctamente.`,
-          'success'
-        );
-        this.router.navigateByUrl('/clientes');
+      .subscribe({
+        next: () => {
+          swal.fire(
+            'Nuevo cliente',
+            `Cliente ${this.cliente.nombre}, ${this.cliente.apellido} creado correctamente.`,
+            'success'
+          );
+          this.router.navigateByUrl('/clientes');
+        },
+        error: err => {
+          this.errores = err.error.errors as string[]
+        }
       });
   }
 
   update(): void {
     this.clienteService.update(this.cliente)
-      .subscribe(
-        cliente => {
+      .subscribe({
+        next: (cliente) => {
           swal.fire(
             'Cliente actualizado',
             `Cliente ${this.cliente.nombre}, ${this.cliente.apellido} actualizado correctamente.`,
             'success'
           );
           this.router.navigateByUrl('/clientes');
+        },
+        error: err => {
+          this.errores = err.error.errors as string[]
         }
+      }
+
       )
   }
 
