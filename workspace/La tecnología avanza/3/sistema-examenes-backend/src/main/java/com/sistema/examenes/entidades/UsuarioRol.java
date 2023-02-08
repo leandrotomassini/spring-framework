@@ -6,7 +6,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
 
 @Entity
 public class UsuarioRol {
@@ -20,5 +19,35 @@ public class UsuarioRol {
     
     @ManyToOne
     private Rol rol;
+    
+    
+    public UsuarioRol(){}
+
+    public Long getUsuarioRolId() {
+        return usuarioRolId;
+    }
+
+    public void setUsuarioRolId(Long usuarioRolId) {
+        this.usuarioRolId = usuarioRolId;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public Rol getRol() {
+        return rol;
+    }
+
+    public void setRol(Rol rol) {
+        this.rol = rol;
+    }
+    
+    
+    
     
 }
