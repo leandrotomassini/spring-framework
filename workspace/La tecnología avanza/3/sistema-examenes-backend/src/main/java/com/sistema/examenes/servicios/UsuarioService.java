@@ -8,4 +8,7 @@ public interface UsuarioService {
 
     public Usuario guardarUsuario(Usuario usuario, Set<UsuarioRol> usuarioRoles);
 
+    public Usuario obtenerUsuario(String username);
+    
+    public void eliminarUsuario(Long usuarioId);
 }

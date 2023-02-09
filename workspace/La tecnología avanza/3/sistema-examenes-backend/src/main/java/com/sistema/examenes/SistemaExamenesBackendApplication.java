@@ -27,9 +27,9 @@ public class SistemaExamenesBackendApplication implements CommandLineRunner {
 
         usuario.setNombre("Christian");
         usuario.setApellido("Ramirez");
-        usuario.setUsername("christian");
+        usuario.setUsername("christian4");
         usuario.setPassword("12345");
-        usuario.setEmail("c1@gmail.com");
+        usuario.setEmail("c4@gmail.com");
         usuario.setTelefono("9292929");
         usuario.setPerfil("foto.png");
 
