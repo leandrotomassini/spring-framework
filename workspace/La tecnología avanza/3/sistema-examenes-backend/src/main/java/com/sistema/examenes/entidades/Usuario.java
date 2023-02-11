@@ -1,5 +1,6 @@
 package com.sistema.examenes.entidades;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -34,6 +35,7 @@ public class Usuario {
             fetch = FetchType.EAGER,
             mappedBy = "usuario"
     )
+    @JsonIgnore
     private Set<UsuarioRol> usuariosRoles = new HashSet<>();
     private static final Logger LOG = Logger.getLogger(Usuario.class.getName());
 
