@@ -1,1 +1,3 @@
 <a routerLink="'/'"><img src="../../../assets/img/logo-Ap.png" alt=""></a>
+<button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">Entrar</button>
+<button type="button" class="btn btn-outline-light" (click)="onLogout()" *ngIf="isLogged">Cerrar sesión</button>

@@ -16,6 +16,7 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { LoginComponent } from './login/login.component';
   imports: [
     CommonModule,
     RouterModule,
+    FormsModule,
     NgCircleProgressModule.forRoot({}),
   ]
 })

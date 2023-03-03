@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 import com.leandrotomassini.web.entity.Persona;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,6 +32,7 @@ public class PersonaController {
         }
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/personas/crear")
     public String postPersona(@RequestBody Persona persona) {
         try {
@@ -42,6 +44,7 @@ public class PersonaController {
         }
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/personas/eliminar/{id}")
     public String deletePersona(@PathVariable Long id) {
         try {
@@ -54,6 +57,7 @@ public class PersonaController {
         }
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/personas/editar/{id}")
     public Persona editPersona(
             @PathVariable Long id,
@@ -77,7 +81,7 @@ public class PersonaController {
 
     @GetMapping("/personas/perfil")
     public Persona findPersona() {
-        return ipersonaService.findPersonaById((long) 4);
+        return ipersonaService.findPersonaById((long) 1);
     }
 
 }
