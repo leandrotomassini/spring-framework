@@ -1,0 +1,22 @@
+nav ul li {
+    list-style-type: none;
+    float: left;
+    margin-right: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+nav ul li img {
+    width: 25px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li img:hover {
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 381px){
+    nav{
+        display: none;
+    }
+}
