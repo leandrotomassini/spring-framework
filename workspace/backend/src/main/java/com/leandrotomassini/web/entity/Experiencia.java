@@ -11,10 +11,10 @@ public class Experiencia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
     private String nombreE;
     private String descripcionE;
 
+    //Constructores
     public Experiencia() {
     }
 
@@ -23,6 +23,7 @@ public class Experiencia {
         this.descripcionE = descripcionE;
     }
 
+    //Getters and setters
     public int getId() {
         return id;
     }
@@ -46,7 +47,5 @@ public class Experiencia {
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
     }
-    
-    
 
 }

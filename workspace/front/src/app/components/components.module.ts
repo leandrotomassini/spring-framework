@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 // Gráficos
 import { NgCircleProgressModule } from 'ng-circle-progress';
@@ -16,7 +17,8 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
+import { NuevaExperienciaComponent } from './nueva-experiencia/nueva-experiencia.component';
+import { EditarExperienciaComponent } from './editar-experiencia/editar-experiencia.component';
 
 
 @NgModule({
@@ -32,6 +34,8 @@ import { FormsModule } from '@angular/forms';
     HardandsoftskillsComponent,
     HomeComponent,
     LoginComponent,
+    NuevaExperienciaComponent,
+    EditarExperienciaComponent,
   ],
   exports: [
     HeaderComponent,

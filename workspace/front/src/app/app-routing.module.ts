@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { NuevaExperienciaComponent } from './components/nueva-experiencia/nueva-experiencia.component';
+import { EditarExperienciaComponent } from './components/editar-experiencia/editar-experiencia.component';
 
 const routes: Routes = [
   {
@@ -14,6 +16,16 @@ const routes: Routes = [
     path: 'login',
     pathMatch: 'full',
     component: LoginComponent
+  },
+  {
+    path: 'nuevaexperiencia',
+    pathMatch: 'full',
+    component: NuevaExperienciaComponent
+  },
+  {
+    path: 'editarexperiencia/:id',
+    pathMatch: 'full',
+    component: EditarExperienciaComponent
   },
   {
     path: '**',
