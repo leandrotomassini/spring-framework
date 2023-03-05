@@ -19,6 +19,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NuevaExperienciaComponent } from './nueva-experiencia/nueva-experiencia.component';
 import { EditarExperienciaComponent } from './editar-experiencia/editar-experiencia.component';
+import { NeweducacionComponent } from './nuevaeducacion/nuevaeducacion.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { EditarExperienciaComponent } from './editar-experiencia/editar-experien
     LoginComponent,
     NuevaExperienciaComponent,
     EditarExperienciaComponent,
+    NeweducacionComponent
   ],
   exports: [
     HeaderComponent,

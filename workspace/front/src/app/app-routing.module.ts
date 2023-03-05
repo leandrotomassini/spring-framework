@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NuevaExperienciaComponent } from './components/nueva-experiencia/nueva-experiencia.component';
 import { EditarExperienciaComponent } from './components/editar-experiencia/editar-experiencia.component';
+import { NeweducacionComponent } from './components/nuevaeducacion/nuevaeducacion.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,11 @@ const routes: Routes = [
     path: 'editarexperiencia/:id',
     pathMatch: 'full',
     component: EditarExperienciaComponent
+  },
+  {
+    path: 'nuevaeducacion',
+    pathMatch: 'full',
+    component: NeweducacionComponent
   },
   {
     path: '**',
