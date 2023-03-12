@@ -1,0 +1,30 @@
+article {
+    display: grid;
+    grid-template-areas: "foto foto titulo titulo titulo"
+        "foto foto texto texto texto"
+        "foto foto texto texto texto";
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+h2{
+    margin-bottom: .5em;
+    margin-top: 2em;
+    text-decoration: underline;
+}
+
+img {
+    grid-area: foto;
+    width: 150px;
+    height: 100px;
+}
+
+h3 {
+    grid-area: titulo;
+    align-self: center;
+    text-decoration: underline; 
+}
+
+p {
+    grid-area: texto;
+}

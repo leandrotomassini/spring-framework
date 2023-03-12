@@ -1,0 +1,42 @@
+header {
+    background-color: #292929;
+    width: 100%;
+}
+
+header img {
+    width: 150px;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    list-style: none;
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+header nav ul li.logo {
+    margin-right: auto;
+}
+
+header nav ul li a {
+    color: white;
+    position: relative;
+}
+
+header nav ul li a i {
+    transition: all 0.2s ease-in-out;
+}
+
+header nav ul li a:hover i {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+header nav ul li a:hover i:before {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}

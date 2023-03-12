@@ -1,0 +1,32 @@
+h2 {
+    text-decoration: underline;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+nav ul {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    display: wrap;
+}
+
+
+nav ul li {
+    list-style: none;
+    margin-right: 1em;
+}
+
+
+
+@media (max-width: 540px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+}

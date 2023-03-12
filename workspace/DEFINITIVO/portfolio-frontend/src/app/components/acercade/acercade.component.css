@@ -1,0 +1,43 @@
+.profile-photo {
+    border-radius: 100%;
+    border: 1px solid white;
+    width: 200px;
+    height: 200px;
+}
+
+.acerca-de {
+    display: grid;
+    grid-template-areas: "foto nombre nombre nombre"
+        "foto texto texto texto";
+    gap: .5em;
+    margin-top: 1em;
+}
+
+img {
+    grid-area: foto;
+}
+
+h1 {
+    grid-area: nombre;
+    align-self: center;
+}
+
+p {
+    grid-area: texto;
+    text-align: justify;
+}
+
+@media (max-width: 540px) {
+    .acerca-de {
+        display: grid;
+        grid-template-areas: "foto foto foto foto"
+            "nombre nombre nombre nombre"
+            "texto texto texto texto";
+        justify-items: center;
+        gap: .5em;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 1em;
+    }
+
+}
